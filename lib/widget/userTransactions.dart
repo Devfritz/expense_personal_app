@@ -26,7 +26,10 @@ class _UserTransactionState extends State<UserTransaction> {
 
   void _addTransaction(String id, String title, double amount) {
     final newTx = Transactions(
-        id: '2', title: title, amount: amount, date: DateTime.now());
+        id: DateTime.now().toString(),
+        title: title,
+        amount: amount,
+        date: DateTime.now());
 
     setState(() {
       listTransaction.add(newTx);
