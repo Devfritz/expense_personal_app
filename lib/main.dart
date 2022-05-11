@@ -16,25 +16,26 @@ class ExpensePesonalApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Scaffold(
-          appBar: AppBar(title: Text("Expenses")),
-          body: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Container(
-                  width: 500,
-                  margin: EdgeInsets.only(top: 20),
-                  child: Card(
-                    color: Colors.blueGrey,
-                    child: Text(
-                      "Chart",
-                      style: TextStyle(fontSize: 24, color: Colors.white),
-                      textAlign: TextAlign.center,
+            appBar: AppBar(title: Text("Expenses")),
+            body: SingleChildScrollView(
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Container(
+                      width: 500,
+                      margin: EdgeInsets.only(top: 20),
+                      child: Card(
+                        color: Colors.blueGrey,
+                        child: Text(
+                          "Chart",
+                          style: TextStyle(fontSize: 24, color: Colors.white),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
                     ),
-                  ),
-                ),
-                UserTransaction(),
-              ]),
-        ));
+                    UserTransaction(),
+                  ]),
+            )));
   }
 }
